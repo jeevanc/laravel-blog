@@ -1,0 +1,23 @@
+{
+  "name": "MeroPustak",
+  "description": "This is the application for meropustak",
+  "main": "",
+  "authors": [
+    "Jeevan Chapagain <manutd.jeevan@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-validation": "^1.16.0",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}

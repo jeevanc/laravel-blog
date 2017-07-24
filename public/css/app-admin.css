@@ -1,0 +1,12 @@
+.message-box {
+    background-color: #f9f9f9;
+}
+
+.message-box tr {
+    cursor: pointer;
+}
+
+.unread-message {
+    background-color: #ffffff;
+    font-weight: bold;
+}
