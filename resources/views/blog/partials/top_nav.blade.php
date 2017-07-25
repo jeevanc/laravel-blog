@@ -1,5 +1,5 @@
 <header class="main-header">
-    <a href="{{route('meropustak_dashboard')}}" class="logo">
+    <a href="{{route('blog_dashboard')}}" class="logo">
         <span class="logo-mini"><b>M</b>B</span>
         <span class="logo-lg"><b>Mero</b>Blog</span>
     </a>

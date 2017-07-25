@@ -3,13 +3,13 @@
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="{{ request()->is('meropustak') ? 'active' : '' }}">
-                <a href="{{route('meropustak_dashboard')}}">
+                <a href="{{route('blog_dashboard')}}">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
-               <a href="">
+               <a href="{{route('posts.index')}}">
                    <i class="fa fa-dashboard"></i>
                    <span>Posts</span>
                </a>

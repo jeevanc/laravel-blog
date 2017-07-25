@@ -1,9 +1,13 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
-| Dashboard Routes
+| Posts Routes
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', 'DashboardController@show')->name('blog_dashboard');
+Route::group(['prefix'=>'posts'],function (){
+    Route::get('/','PostsController@index')->name('posts.index');
+   
+
+
+});
