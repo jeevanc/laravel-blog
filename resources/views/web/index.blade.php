@@ -5,13 +5,13 @@
             <div class="col-md-8">
                 <article class="post-item">
                     <div class="post-item-image">
-                        <a href="post.html">
+                        <a href="#">
                             <img src="{{asset('img/Post_Image_1.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="post-item-body">
                         <div class="padding-10">
-                            <h2><a href="post.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h2>
+                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptas, blanditiis impedit repellat harum, eaque saepe aspernatur quo magnam obcaecati dolor! Deleniti quod repellendus non iste architecto, voluptate excepturi velit.</p>
                         </div>
 
@@ -25,20 +25,20 @@
                                 </ul>
                             </div>
                             <div class="pull-right">
-                                <a href="post.html">Continue Reading &raquo;</a>
+                                <a href="#">Continue Reading &raquo;</a>
                             </div>
                         </div>
                     </div>
                 </article>
                 <article class="post-item">
                     <div class="post-item-image">
-                        <a href="post.html">
+                        <a href="#">
                             <img src="{{asset('img/Post_Image_2.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="post-item-body">
                         <div class="padding-10">
-                            <h2><a href="post.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h2>
+                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptas, blanditiis impedit repellat harum, eaque saepe aspernatur quo magnam obcaecati dolor! Deleniti quod repellendus non iste architecto, voluptate excepturi velit.</p>
                         </div>
 
@@ -52,20 +52,20 @@
                                 </ul>
                             </div>
                             <div class="pull-right">
-                                <a href="post.html">Continue Reading &raquo;</a>
+                                <a href="#">Continue Reading &raquo;</a>
                             </div>
                         </div>
                     </div>
                 </article>
                 <article class="post-item">
                     <div class="post-item-image">
-                        <a href="post.html">
+                        <a href="#">
                             <img src="{{asset('img/Post_Image_3.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="post-item-body">
                         <div class="padding-10">
-                            <h2><a href="post.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit, consectetur adipisicing elit</a></h2>
+                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, consectetur adipisicing elit</a></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptas, blanditiis impedit repellat harum, eaque saepe aspernatur quo magnam obcaecati dolor! Deleniti quod repellendus non iste architecto, voluptate excepturi velit.</p>
                         </div>
 
@@ -79,7 +79,7 @@
                                 </ul>
                             </div>
                             <div class="pull-right">
-                                <a href="post.html">Continue Reading &raquo;</a>
+                                <a href="#">Continue Reading &raquo;</a>
                             </div>
                         </div>
                     </div>
