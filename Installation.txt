@@ -6,7 +6,7 @@ follow these steps to install the application and run it on your computer.
 4) bower install
 5) npm install
 6) generate key using php artisan key:generate
-7) migrate and seed the tables
+7) migrate and seed the tables using php artisan migrate --seed
 8) server the project using php artisan serve
 
 now you are good to go.
