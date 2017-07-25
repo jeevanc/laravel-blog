@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('web.index');
-});
+Route::get('/', 'Web\BlogController@index');
+
 
 Route::prefix('blog')->group(function () {
     Auth::routes();
