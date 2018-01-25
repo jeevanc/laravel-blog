@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', 'Web\BlogController@index');
+Route::get('/', 'Web\BlogController@index')->name('blog.home');
 
+Route::get('/blog/{post}','Web\BlogController@show')->name('blog.show');
 
 Route::prefix('blog')->group(function () {
     Auth::routes();
 });
+
 
 // Route::get('/home', 'HomeController@index')->name('home');

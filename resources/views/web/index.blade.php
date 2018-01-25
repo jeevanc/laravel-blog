@@ -18,21 +18,21 @@
 
                     <div class="post-item-body">
                         <div class="padding-10">
-                            <h2><a href="#">{{$post->title}}</a></h2>
+                            <h2><a href="{{route('blog.show', $post->slug)}}">{{$post->title}}</a></h2>
                             <p>{{$post->excerpt}}</p>
                         </div>
 
                         <div class="post-meta padding-10 clearfix">
                             <div class="pull-left">
                                 <ul class="post-meta-group">
-                                    <li><i class="fa fa-user"></i><a href="#">{{$post->author->name}}</a></li>
+                                    <li><i class="fa fa-user"></i><a href="{{route('blog.show', $post->slug)}}">{{$post->author->name}}</a></li>
                                     <li><i class="fa fa-clock-o"></i><time>{{$post->created_at->diffForHumans()}}</time></li>
                                     <li><i class="fa fa-tags"></i><a href="#"> Blog</a></li>
                                     <li><i class="fa fa-comments"></i><a href="#">4 Comments</a></li>
                                 </ul>
                             </div>
                             <div class="pull-right">
-                                <a href="#">Continue Reading &raquo;</a>
+                                <a href="{{route('blog.show', $post->slug)}}">Continue Reading &raquo;</a>
                             </div>
                         </div>
                     </div>

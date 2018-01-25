@@ -12,4 +12,9 @@ class BlogController extends Controller
     	$posts = Post::with('author')->latestFirst()->simplePaginate(5);
     	return view('web.index',compact('posts'));
     }
+
+    public function show(Post $post){
+    	// $post = Post::findOrFail($id);
+    	return view('web.show',compact('post'));
+    }
 }

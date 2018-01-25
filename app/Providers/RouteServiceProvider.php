@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use File;
-
+use App\Post;
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -27,6 +27,10 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+        Route::bind('post',function($slug){
+            return Post::where('slug',$slug)->first();
+        });
     }
 
     /**
