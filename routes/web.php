@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'Web\BlogController@index')->name('blog.home');
+ 
+Route::get('/category/{category}','Web\BlogController@category')->name('category');
 
 Route::get('/blog/{post}','Web\BlogController@show')->name('blog.show');
 
