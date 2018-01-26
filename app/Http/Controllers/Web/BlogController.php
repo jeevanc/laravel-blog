@@ -9,21 +9,36 @@ use App\Category;
 
 class BlogController extends Controller
 {
-    public function index(){
+    protected $limit = 5;
 
-    	$categories = Category::with('posts')->orderBy('title','asc')->get();
-    	$posts = Post::with('author')->latestFirst()->simplePaginate(5);
-    	return view('web.index',compact('posts','categories'));
+    public function index()
+    {
+        $posts = Post::with('author')
+                    ->latestFirst()
+                    ->published()
+                    ->simplePaginate($this->limit);
+
+        return view("web.index", compact('posts'));
     }
 
-     public function category($id){
+    public function category(Category $category)
+    {
+        $categoryName = $category->title;
 
-    	$categories = Category::with('posts')->orderBy('title','asc')->get();
-    	$posts = Post::with('author')->latestFirst()->where('category_id',$id)->simplePaginate(5);
-    	return view('web.index',compact('posts','categories'));
+        // \DB::enableQueryLog();
+        $posts = $category->posts()
+                          ->with('author')
+                          ->latestFirst()
+                          ->published()
+                          ->simplePaginate($this->limit);
+
+         return view("web.index", compact('posts', 'categoryName'));
+
+        //  dd(\DB::getQueryLog());
     }
 
-    public function show(Post $post){
-    	return view('web.show',compact('post'));
+    public function show(Post $post)
+    {
+        return view("web.show", compact('post'));
     }
 }

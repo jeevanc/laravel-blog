@@ -8,8 +8,6 @@ use App\Post;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -28,7 +26,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function post(){
+    public function posts()
+    {
         return $this->hasMany(Post::class);
     }
 }

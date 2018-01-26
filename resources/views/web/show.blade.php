@@ -1,7 +1,6 @@
 @extends('web.layouts.layout')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -25,7 +24,7 @@
                                 </ul>
                             </div>
 
-                            {!! $post->body !!}
+                            {!! $post->body_html !!}
                         </div>
                     </div>
                 </article>
@@ -34,7 +33,7 @@
                     <div class="media">
                       <div class="media-left">
                         <a href="#">
-                          <img alt="Author 1" src="/img/author.jpg" class="media-object">
+                          <img alt="Author 1" src="/img/author.png" class="media-object">
                         </a>
                       </div>
                       <div class="media-body">
@@ -52,7 +51,8 @@
 
                 <!-- comments here -->
             </div>
-@include('web.partials.side_nav')
+
+            @include('web.partials.side_nav')
         </div>
     </div>
 

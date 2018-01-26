@@ -3,13 +3,24 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
+use Carbon\Carbon;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class Post extends Model
 {
-    public function author(){
+    protected $dates = ['published_at'];
+
+    public function author()
+    {
         return $this->belongsTo(User::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+
     public function getImageUrlAttribute($value)
     {
         $imageUrl = "";
@@ -23,15 +34,23 @@ class Post extends Model
         return $imageUrl;
     }
 
-    public function category(){
-        return $this->belongsTo(Category::class);
+    public function getDateAttribute($value)
+    {
+        return is_null($this->published_at) ? '' : $this->published_at->diffForHumans();
     }
+
+    
+
+    
 
 
     public function scopeLatestFirst($query)
     {
-        return $this->orderBy('created_at', 'desc');
+        return $query->orderBy('published_at', 'desc');
     }
 
-
+    public function scopePublished($query)
+    {
+        return $query->where("published_at", "<=", Carbon::now());
+    }
 }
